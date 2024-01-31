@@ -1,6 +1,5 @@
 header{
     width: 1440px;
-    height: 500px;
     size: 26px;
     font-family: 'Lora', serif;
     color:  #FFFFFF;
@@ -34,6 +33,56 @@ h2{
 }
 .line{
     width:188px;
-    height: 10px;
-    color: #db0000;
+    height: 1px;
+    background-color: #DEDEDE;
+    margin: 10px 0px;
+}
+
+.featured_posts{
+    display: flex;
+    width: 960px;
+    height: 294px;
+}
+
+.post1{
+    background-image: url("images/The_road_ahead.png")
+}
+
+.post2{
+    background-image: url("images/From_Top_Down.png")
+}
+
+.title{
+    font-family: 'Lora', serif;
+    font-size: 27px;
+    color: #FFFFFF;
+}
+
+.description{
+    font-family: 'Oxygen', sans-serif;
+    size: 14px;
+    color: #FFFFFFB2;
+}
+
+.author{
+    font-family: 'Oxygen', sans-serif;
+    size: 12px;
+    color: #FFFFFFB2;
+}
+
+.most_recent{
+    width: 940px;   
+    height: 752px;
+}
+
+.title_recent{
+    color:  #101315;
+    size: 16px;
+    font-family: 'Lora', serif;
+}
+
+.description_recent{
+    color: #7A7A7A;
+    font-family: 'Oxygen', sans-serif;
+    size: 13px;
 }
