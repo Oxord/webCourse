@@ -1,4 +1,30 @@
 header{
+    width: 1440px;
+    height: 500px;
     size: 26px;
     font-family: 'Lora', serif;
+    color:  #FFFFFF;
+    background-image: url("images/img_header.jpg")
+}
+
+a{
+    color:  #FFFFFF
+}
+
+.button{
+    width: 167px;
+    height: 44px;
+    background-color: #DD783F
+}
+
+.list{
+    width: 1440px;
+    height: 65px
+}
+
+.list_item{
+    color: #768088;
+    width: 139px;
+    height: 46px;
+    border-radius: 3px
 }
