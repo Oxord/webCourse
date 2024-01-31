@@ -86,3 +86,14 @@ h2{
     font-family: 'Oxygen', sans-serif;
     size: 13px;
 }
+
+.author_recent{
+    font-family: 'Oxygen', sans-serif;
+    size: 12px;
+    color: #999999;
+}
+
+footer{
+    background-image: url("images/footer.png");
+    width: 1440px;
+}
