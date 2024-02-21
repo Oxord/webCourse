@@ -1,99 +1,227 @@
-header{
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    font-weight: 400;
+}
+
+body{
     width: 1440px;
-    size: 26px;
-    font-family: 'Lora', serif;
-    color:  #FFFFFF;
-    background-image: url("images/img_header.jpg")
 }
 
-a{
-    color:  #FFFFFF
+header{
+    background-image: url("images/img_header.jpg");
+    width: 1440px;
+    height: 500px;
 }
 
-.button{
+header span{
+    font-family: "Lora", serif;
+    font-size: 26px;
+    color: white;
+}
+
+header nav{
+    font-family: "Oxygen", sans-serif;
+    font-size: 12px;
+    color: white;
+}
+
+.navigation{
+    display: inline;
+}
+
+title{
+    display: block;
+}
+.title h1{
+    font-size: 50px;
+    font-family: "Lora", serif;
+    color: white;
+}
+.title p{
+    font-size: 17px;
+    font-family: "Oxygen", sans-serif;
+    color: rgba(255, 255, 255, 0.63)
+}
+.title button{
     width: 167px;
     height: 44px;
-    background-color: #DD783F
+    background-color: #DD783F;
+    border-radius: 3px;
+    border: none;
+    color: #FFFFFF;
+    font-family: "Oxygen", sans-serif;
+    font-size: 13px;
 }
 
 .list{
-    width: 1440px;
-    height: 65px
+    display: inline;    
 }
-
-.list_item{
+.list a{
+    font-family: "Lora", serif;
+    font-size: 14px;
     color: #768088;
-    width: 139px;
-    height: 46px;
-    border-radius: 3px
+    text-decoration: none;
 }
 
-h2{
-    font-family: 'Oxygen', sans-serif
+.main_context h2{
+    font-family: "Oxygen", sans-serif;
+    font-size: 20px;
+    color: #2E2E2E;
+    display: block;
 }
+
 .line{
-    width:188px;
+    display: block;
+    width: 188px;
     height: 1px;
-    background-color: #DEDEDE;
-    margin: 10px 0px;
+    border-bottom: 1px solid #DEDEDE;
+    padding-top: 16px;
+    margin-bottom: 16px;
 }
 
-.featured_posts{
-    display: flex;
+.posts{
+    display: block;
     width: 960px;
-    height: 294px;
 }
 
-.post1{
-    background-image: url("images/The_road_ahead.png")
+.posts .road_ahead{
+    display: block;
+    width: 460px;
+    height: 280px;
+    background-image: url("images/The_road_ahead.png");
+
 }
 
-.post2{
-    background-image: url("images/From_Top_Down.png")
-}
-
-.title{
-    font-family: 'Lora', serif;
+.posts h1{
+    padding-top: 158px;
+    font-family: "Lora", serif;
     font-size: 27px;
+    color: white;
+}
+
+.posts p{
+    font-family: "Oxygen", sans-serif;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 12px;
+}
+
+.author_post{
+    display: inline;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.author_post span{
+    font-size: 12px;
+    font-family: "Oxygen", sans-serif;
     color: #FFFFFF;
 }
 
+.date{
+    margin-left: 215px;
+}
+
+.author_wong{
+    font-size: 11px;
+    font-family: "Oxygen", sans-serif;
+    color: #FFFFFF;
+}
+
+.posts .from_top_down{
+    display: block;
+    width: 460px;
+    height: 280px;
+    background-image: url("images/From_Top_Down.png");
+
+}
+
+.recent{
+    display: block;
+    width: 296px;
+    height: 291px;
+}
+
 .description{
-    font-family: 'Oxygen', sans-serif;
-    size: 14px;
-    color: #FFFFFFB2;
+    display: block;
+    height: 93px;
 }
 
-.author{
-    font-family: 'Oxygen', sans-serif;
-    size: 12px;
-    color: #FFFFFFB2;
+.description .title{
+    padding-top: 14px;
+    font-size: 16px;
+    color: black;
+    font-family: "Lora", serif;
 }
 
-.most_recent{
-    width: 940px;   
-    height: 752px;
-}
-
-.title_recent{
-    color:  #101315;
-    size: 16px;
-    font-family: 'Lora', serif;
-}
-
-.description_recent{
+.description p{
+    padding-top: 6px;
     color: #7A7A7A;
-    font-family: 'Oxygen', sans-serif;
-    size: 13px;
+    font-size: 13px;
+    font-family: "Oxygen", sans-serif;
+}
+
+.line_in_recent{
+    display: block;
+    width: 296px;
+    height: 1px;
+    border-bottom: 1px solid #DEDEDE;
 }
 
 .author_recent{
-    font-family: 'Oxygen', sans-serif;
-    size: 12px;
-    color: #999999;
+    display: inline;
 }
 
-footer{
+.author_recent img{
+    padding-top: 12px;
+    padding-left: 13px;
+}
+
+.author_recent span{
+    font-family: "Oxygen", sans-serif;
+    font-weight: 400;
+    color: #999999;
+    font-size: 12px;
+}
+
+.author_recent .wong{
+    font-size: 11px;
+}
+
+.author_recent .vogels{
+    font-size: 12px;
+}
+
+.date_recent{
+    padding-left: 100px;
+}
+
+.footer{
+    display: block;
+    height: 89px;
     background-image: url("images/footer.png");
-    width: 1440px;
+}
+
+.footer span{
+    font-family: "Lora", serif;
+    font-size: 26px;
+    color: white;
+}
+
+.nav_footer{
+    display: inline;
+    margin-left: 576px;
+}
+
+.nav_footer a{
+    font-family: "Oxygen", sans-serif;
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    margin-right: 20px;
 }
