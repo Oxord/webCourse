@@ -14,14 +14,16 @@
 
 <body class="container">
     <header class="site-logo__top-menu top-menu">
-        <div class="top-menu__menu menu-ahead">
-            <span class="menu__title title title-ahead">Escape.</span> 
-            <nav class="menu__navigation navigation navigation-ahead">
-                <a href="#" class="navigation__item item-ahead">HOME</a>
-                <a href="#" class="navigation__item item-ahead">CATEGORIES</a>
-                <a href="#" class="navigation__item item-ahead">ABOUT</a>
-                <a href="#" class="navigation__item item-ahead">CONTACT</a>
-            </nav>                     
+        <div class="site-logo__top-menu top-menu">
+            <div class="top-menu__menu menu">
+                <span class="menu__title title paragraph-ahead">Escape.</span> 
+                <nav class="menu__navigation navigation">
+                    <a href="#" class="navigation__item item-ahead">HOME</a>
+                    <a href="#" class="navigation__item item-ahead">CATEGORIES</a>
+                    <a href="#" class="navigation__item item-ahead">ABOUT</a>
+                    <a href="#" class="navigation__item item-ahead">CONTACT</a>
+                </nav>                     
+            </div>
         </div>
         <div class="site-logo__maintext maintext-ahead">
             <h1 class="maintext__title title-ahead">The Road Ahead</h1>
@@ -65,18 +67,30 @@
             </p>
         </div>     
     </main>
-    <footer class="footer">
-        <div class="footer__site-logo__top-menu top-menu">
-        <div class="footer__top-menu__menu menu">
-            <span class="menu__title title">Escape.</span> 
-            <nav class="menu__navigation navigation">
-                <a href="#" class="navigation__item">HOME</a>
-                <a href="#" class="navigation__item">CATEGORIES</a>
-                <a href="#" class="navigation__item">ABOUT</a>
-                <a href="#" class="navigation__item">CONTACT</a>
-            </nav>                     
-        </div>
-    </footer>  
+    <div class="footer_and_form">
+        <div class="footer_and_form__form form">
+            <div class="form__title_context title_context">
+                <span class="title_context__title">Stay in Touch</span>
+                <div class="title_context__line"></div>
+            </div>
+            <div class="form__buttons buttons">
+                <input class="buttons__input_email input_email" placeholder=" Enter your email address">
+                <button class="buttons__submit submit" onclick="alert()">Submit</button>
+            </div>
+        </div>   
+        <footer class="footer_and_form__footer footer">
+                <div class="footer__site-logo__top-menu top-menu">
+                <div class="footer__top-menu__menu menu">
+                    <span class="menu__title title">Escape.</span> 
+                    <nav class="menu__navigation navigation">
+                        <a href="#" class="navigation__item">HOME</a>
+                        <a href="#" class="navigation__item">CATEGORIES</a>
+                        <a href="#" class="navigation__item">ABOUT</a>
+                        <a href="#" class="navigation__item">CONTACT</a>
+                    </nav>                     
+                </div>
+            </footer>   
+    </div> 
 </body>
 
 </html>

@@ -26,10 +26,7 @@
     height: 40px;
 }
 
-.menu__navigation{
-    padding-left: 471px;
-    padding-bottom: 20px;
-}
+
 
 
 .title{
@@ -40,9 +37,6 @@
     line-height: 26px;
     letter-spacing: 0em;
     text-align: left;
-    padding-top: 3px;
-    padding-bottom: 11px;
-    padding-right: 848px;
 }
 
 .navigation__item{
@@ -136,10 +130,11 @@
 
 .main_context__featured_posts{
     width: 940px;
-    
     left: 250px;
     margin-left: 250px;
     margin-right: 250px;
+    display: flex;
+    flex-direction: column;
 }
 
 .title_main{
@@ -167,6 +162,7 @@
 .featured_posts__posts{
     display: block;
     width: 960px;
+    display: flex;
 }
 
 .post__road_ahead{
@@ -209,11 +205,13 @@
 }
 
 .post__author_post{
-    display: inline;
-    text-align: center;
+    display: flex;
+    align-items: center;
     margin-left: 20px;
     margin-right: 20px;
     padding-bottom: 15px;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .author_post__icon{
@@ -229,16 +227,21 @@
     line-height: 35px;
     letter-spacing: 0em;
     text-align: left;
+    white-space: nowrap;
+    justify-content: flex-end;
+    text-align: right;
+    padding-left: 10px;
 }
 
 .author_post__date{
-    padding-left: 215px;
-    width: 108px;
-    height: 35px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 35px;
     font-family: "Oxygen", sans-serif;
-    font-size: 14px;
     color: rgba(255, 255, 255, 0.7);
-    margin-bottom: 12px;
+    flex: 1 1 50%;
+    text-align: right;
+    white-space: nowrap;
 }
 
 .author_post__author_wong{
@@ -256,9 +259,12 @@
 }
 
 .main_context__most_recent{
-    max-width: 960px;
+    display: flex;
+    width: 960px;
     padding: 60px, 0px, 0px, 0px;
     margin-left: 240px;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .main_context__recent{
@@ -295,43 +301,54 @@
 }
 
 .recent__author_recent{
-    display: block;
-    height: 48px;
-    background-color: #FCFCFC;
+    background-color: rgba(252, 252, 252, 1);
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .author_recent__img{
-    padding-top: 12px;
-    padding-left: 13px;
-}
-
-.author_recent__span{
-    font-family: "Oxygen", sans-serif;
-    font-weight: 400;
-    color: #999999;
-    font-weight: 400;
-    line-height: 35px;
-    letter-spacing: 0em;
-    text-align: left;
-    font-weight: 12px;  
+    padding-block: 12px;
+    padding-inline: 10px;
 }
 
 .author_recent__author-wong{
     font-size: 11px;
 }
 
-.author_recent__author-vogels{
+.author_recent__author{
+    color: rgba(153, 153, 153, 1);
+    font-family: "Oxygen";
     font-size: 12px;
+    font-weight: 400;
+    line-height: 35px;
+    letter-spacing: 0em;
+    text-align: left;
+    white-space: nowrap;
+    justify-content: flex-end;
+    text-align: right;
+    padding-left: 10px;
 }
 
 .author_recent__date_recent{
-    padding-left: 100px;
+    font-family: "Oxygen";
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 35px;
+    letter-spacing: 0em;
+    text-align: left;
+    flex: 1 1 50%;
+    text-align: right;
+    white-space: nowrap;
+    color: rgba(153, 153, 153, 1);
 }
 
 .footer{
     display: block;
     height: 89px;
-    background-image: url("images/footer.png");
+    margin-top: 90px;
+    background: rgba(35, 47, 56, 0.6);
 }
 
 
@@ -378,3 +395,100 @@
     margin-left: 0px;
 }
 
+.footer_and_form{
+    max-width: 1440px;
+    height: 378px;
+    background-image: url("images/FormBackground.png");
+}
+
+.form{
+    padding-top: 82px;
+    max-width: 940px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+}     
+
+.form__title_context{
+    width: 940px;
+    height: 47px;
+    
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title_context__title{
+    font-family: "Oxygen";
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: white;
+    padding-left: 391px;
+    padding-right: 391px;
+    padding-top: 1px;
+}
+
+.title_context__line{
+    padding-top: 17px;
+    width: 188px;
+    height: 1px;
+    border-bottom: 1px solid #ffffff;
+    margin-left: 376px;
+}
+
+.form__buttons{
+    padding-left: 220px;
+    padding-top: 20px;
+    padding-right: 220px;
+    display: flex;
+}
+
+.buttons__input_email{
+    width: 375px;
+    height: 50px;
+    border-radius: 3px 0px 0px 3px;
+    border: none;
+    flex: 0 0 auto;
+    background-color: #FFFFFF;
+    font-family: "Roboto", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0em;
+    text-align: left;
+    padding-left: 35px;
+    color: #817F83;
+}
+
+.buttons__submit{
+    width: 125px;
+    height: 50px;
+    left: 375px;
+    border-radius: 0px 3px 3px 0px;
+    border: none;
+    flex: 0 0 auto;
+    background-color: rgba(255, 255, 255, 0.28);
+    font-family: "Roboto", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0em;
+    text-align: left;
+    padding-left: 44px;
+    color: #F8F8F8;
+}
+
+.buttons__submit:hover{
+    background-color: rgba(255, 255, 255, 0.20);
+}
+
+.buttons__submit:active{
+    background-color: rgba(255, 255, 255, 0.12);
+}
