@@ -1,7 +1,7 @@
 <div class="main_context__recent recent">
     <img src = <?= $post['img_background']?> alt="">
     <div class="recent__description description">
-        <p class="description__title"><?= $post['title'] ?></p>
+        <a href='/post.php?id=<?= $post['id'] ?>'><p class="description__title"><?= $post['title'] ?></p></a>
         <p class="description__usual_text"><?= $post['subtitle'] ?></p>
     </div>
     <div class="recent__line"></div>

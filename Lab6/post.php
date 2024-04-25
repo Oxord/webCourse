@@ -1,54 +1,4 @@
 <?php
-// $posts = [
-//     [
-//         'title' => 'Still Standing Tall',
-//         'subtitle' => 'Life begins at the end of your comfort zone',
-//         'img_author' => 'static/images/Wong.png',
-//         'img_background' => 'static/images/Still_Standing_Tall.jpg',
-//         'author' => 'William Wong',
-//         'date' => '9/25/2015'
-//     ],
-//     [
-//         'title' => 'Sunny Side Up',
-//         'subtitle' => 'No place is ever as bad as they tell you it is going to be.',
-//         'img_author' => 'static/images/Mat_Vogels.png',
-//         'img_background' => 'static/images/Sunny_Side_Up.png',
-//         'author' => 'Mat Vogels',
-//         'date' => '9/25/2015'
-//     ],
-//     [
-//         'title' => 'Water Falls',
-//         'subtitle' => 'We travel not to escape life, but for life not to escape us.',
-//         'img_author' => 'static/images/Mat_Vogels.png',
-//         'img_background' => 'static/images/Water_Falls.png',
-//         'author' => 'Mat Vogels',
-//         'date' => '9/25/2015'
-//     ],
-//     [
-//         'title' => 'Through the Mist',
-//         'subtitle' => 'Travel makes you see what a tiny place you occupy in the world.',
-//         'img_author' => 'static/images/Wong.png',
-//         'img_background' => 'static/images/Through_the_Mist.png',
-//         'author' => 'William Wong',
-//         'date' => '9/25/2015'
-//     ],
-//     [
-//         'title' => 'Awaken Early',
-//         'subtitle' => 'Not all those who wander are lost.',
-//         'img_author' => 'static/images/Mat_Vogels.png',
-//         'img_background' => 'static/images/Awaken_Early.png',
-//         'author' => 'Mat Vogels',
-//         'date' => '9/25/2015'
-//     ],
-//     [
-//         'title' => 'Try it Always',
-//         'subtitle' => 'The world is a book, and those who do not travel read only one page.',
-//         'img_author' => 'static/images/Mat_Vogels.png',
-//         'img_background' => 'static/images/Try_it_always.png',
-//         'author' => 'Mat Vogels',
-//         'date' => '9/25/2015'
-//     ],
-//     ];
 $post=[
     [
         'id' => 1,
@@ -70,7 +20,7 @@ $post=[
     ],
 ];
 $postId =  $_GET['id'];
-$current_post = $post[$postId- 1];
+$current_post = $post[$postId - 1];
 ?>
 
 <!DOCTYPE html>
@@ -79,7 +29,7 @@ $current_post = $post[$postId- 1];
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Road Ahead</title>
+    <title><?= $current_post['id']?></title>
     <link rel="stylesheet" href="static/styles/style.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
@@ -106,7 +56,7 @@ $current_post = $post[$postId- 1];
         </div>
     </header>
     <main class="main_content">
-        <img src=<?= $current_post['img']?> alt="" >
+        <img src=<?= $current_post['img']?> alt="" class="main_content__image">
         <div class="maint_content__content content">
             <p class="content__text">
                 <?= $current_post['text']?>

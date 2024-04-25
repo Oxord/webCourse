@@ -1,6 +1,7 @@
 <?php
 $posts = [
     [
+        'id' => 1,
         'title' => 'Still Standing Tall',
         'subtitle' => 'Life begins at the end of your comfort zone',
         'img_author' => 'static/images/Wong.png',
@@ -9,6 +10,7 @@ $posts = [
         'date' => '9/25/2015'
     ],
     [
+        'id' => 2,
         'title' => 'Sunny Side Up',
         'subtitle' => 'No place is ever as bad as they tell you it is going to be.',
         'img_author' => 'static/images/Mat_Vogels.png',
@@ -17,6 +19,7 @@ $posts = [
         'date' => '9/25/2015'
     ],
     [
+        'id' => 1,
         'title' => 'Water Falls',
         'subtitle' => 'We travel not to escape life, but for life not to escape us.',
         'img_author' => 'static/images/Mat_Vogels.png',
@@ -25,6 +28,7 @@ $posts = [
         'date' => '9/25/2015'
     ],
     [
+        'id' => 1,
         'title' => 'Through the Mist',
         'subtitle' => 'Travel makes you see what a tiny place you occupy in the world.',
         'img_author' => 'static/images/Wong.png',
@@ -33,6 +37,7 @@ $posts = [
         'date' => '9/25/2015'
     ],
     [
+        'id' => 1,
         'title' => 'Awaken Early',
         'subtitle' => 'Not all those who wander are lost.',
         'img_author' => 'static/images/Mat_Vogels.png',
@@ -41,6 +46,7 @@ $posts = [
         'date' => '9/25/2015'
     ],
     [
+        'id' => 1,
         'title' => 'Try it Always',
         'subtitle' => 'The world is a book, and those who do not travel read only one page.',
         'img_author' => 'static/images/Mat_Vogels.png',
@@ -91,10 +97,10 @@ $featured_posts=[
             <div class="top-menu__menu menu">
                 <span class="menu__title title">Escape.</span> 
                 <nav class="menu__navigation navigation">
-                    <a href="#" class="navigation__item">HOME</a>
-                    <a href="#" class="navigation__item">CATEGORIES</a>
-                    <a href="#" class="navigation__item">ABOUT</a>
-                    <a href="#" class="navigation__item">CONTACT</a>
+                    <a href='/post.php?id=<?= $post['id'] ?>' class="navigation__item">HOME</a>
+                    <a href='/post.php?id=<?= $post['id'] ?>' class="navigation__item">CATEGORIES</a>
+                    <a href='/post.php?id=<?= $post['id'] ?>' class="navigation__item">ABOUT</a>
+                    <a href='/post.php?id=<?= $post['id'] ?>' class="navigation__item">CONTACT</a>
                 </nav>                     
             </div>
         </div>

@@ -432,9 +432,6 @@ a{
     margin-left: 0px;
 }
 
-.maintext-ahead{
-    margin-left: 0px;
-}
 
 .footer_and_form{
     max-width: 1440px;
@@ -532,4 +529,8 @@ a{
 
 .buttons__submit:active{
     background-color: rgba(255, 255, 255, 0.12);
+}
+
+.main_content__image{
+    width: 100%;
 }

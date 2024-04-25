@@ -1,5 +1,5 @@
 <div class="posts__post <?= $featured_post['img_modifer'] ?>">
-    <a href='/post?id=<?= $featured_post['id'] ?>'><h1 class="post__title"><?= $featured_post['title']?></h1></a>
+    <a href='/post.php?id=<?= $featured_post['id'] ?>'><h1 class="post__title"><?= $featured_post['title']?></h1></a>
     <p class="post__paragraph"><?= $featured_post['subtitle']?></p>
     <div class="post__author_post author_post">
         <div class="author_post__icon icon">
