@@ -55,26 +55,29 @@ $posts = [
         'date' => '9/25/2015'
     ],
     ];
-$featured_posts=[
-    [
-        'id' => 1,
-        'title' => 'The Road Ahead',
-        'subtitle' => 'The road ahead might be paved - it might not be',
-        'img_author' => 'static/images/Mat_Vogels.png',
-        'author' => 'Mat Vogels',
-        'date' => 'September 25, 2015',
-        'img_modifer' => 'post__road_ahead'
-    ],
-    [
-        'id' => 2,
-        'title' => 'From Top Down',
-        'subtitle' => 'Once a year, go someplace you’ve never been before.',
-        'img_author' => 'static/images/Wong.png',
-        'author' => 'William Wong',
-        'date' => 'September 25, 2015',
-        'img_modifer' => 'post__from_top_down'
-    ],
-];
+    $featured_posts=[
+        [
+            'id' => 1,
+            'title' => 'The Road Ahead',
+            'subtitle' => 'The road ahead might be paved - it might not be',
+            'img_author' => 'static/images/Mat_Vogels.png',
+            'author' => 'Mat Vogels',
+            'date' => 'September 25, 2015',
+            'img_modifer' => 'post__road_ahead'
+        ],
+        [
+            'id' => 2,
+            'title' => 'From Top Down',
+            'subtitle' => 'Once a year, go someplace you’ve never been before.',
+            'img_author' => 'static/images/Wong.png',
+            'author' => 'William Wong',
+            'date' => 'September 25, 2015',
+            'img_modifer' => 'post__from_top_down'
+        ],
+    ];
+    //$MenuLinks = [ 'name' => 'HOME', 'name' => 'CATEGORIES', 'name' => 'ABOUT', 'name' => 'CONTACT'];
+    $MenuLinks = [ 'HOME', 'CATEGORIES', 'ABOUT', 'CONTACT'];
+    $Links = ['Nature', 'Photography', 'Relaxation', 'Vacation', 'Travel', 'Adventure'];
 ?>
 
 
@@ -97,10 +100,11 @@ $featured_posts=[
             <div class="top-menu__menu menu">
                 <span class="menu__title title">Escape.</span> 
                 <nav class="menu__navigation navigation">
-                    <a href='/post.php?id=<?= $post['id'] ?>' class="navigation__item">HOME</a>
-                    <a href='/post.php?id=<?= $post['id'] ?>' class="navigation__item">CATEGORIES</a>
-                    <a href='/post.php?id=<?= $post['id'] ?>' class="navigation__item">ABOUT</a>
-                    <a href='/post.php?id=<?= $post['id'] ?>' class="navigation__item">CONTACT</a>
+                    <?php 
+                        foreach ($MenuLinks as $MenuLink) {
+                        include 'LinkInMenu.php';
+                    }
+                    ?> 
                 </nav>                     
             </div>
         </div>
@@ -113,12 +117,11 @@ $featured_posts=[
     <main class="main_context">
         <div class="main_context__navigation navigation">
             <nav class="navigation__list list">
-                <a href="" class="list__link">Nature</a>
-                <a href="" class="list__link">Photography</a>
-                <a href="" class="list__link">Relaxation</a>
-                <a href="" class="list__link">Vacation</a>
-                <a href="" class="list__link">Travel</a>
-                <a href="" class="list__link">Adventure</a>
+                <?php
+                    foreach($Links as $link){
+                        include 'Link.php';
+                    }
+                ?>
             </nav>
         </div>
         <div class="main_context__featured_posts featured_posts">
@@ -160,10 +163,11 @@ $featured_posts=[
                 <div class="footer__top-menu__menu menu">
                     <span class="menu__title title">Escape.</span> 
                     <nav class="menu__navigation navigation">
-                        <a href="#" class="navigation__item">HOME</a>
-                        <a href="#" class="navigation__item">CATEGORIES</a>
-                        <a href="#" class="navigation__item">ABOUT</a>
-                        <a href="#" class="navigation__item">CONTACT</a>
+                        <?php 
+                            foreach ($MenuLinks as $MenuLink) {
+                            include 'LinkInMenu.php';
+                        }
+                        ?>
                     </nav>                     
                 </div>
             </footer>   
