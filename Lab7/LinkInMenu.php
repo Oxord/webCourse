@@ -1,0 +1,1 @@
+<a href='<?= $MenuLink?>' class="navigation__item"><?=$MenuLink?></a>
