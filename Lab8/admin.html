@@ -51,11 +51,15 @@
                         </div>  
                         <div class="form__author_photo author_photo">
                             <div class="form_text">Author Photo</div>
-                            <div class="author_photo__model">
+                            <div class="author_photo__model model">
                                 <div class="model__circle_image"><img src="static/images/icon_camera.png" class="model__author_image"></div>
                                 <label for="model_image_author" class="model__author_img">Upload</label>  
-                                <input type="file" id="model_image_author" name="model_image_author" accept=".jpg, .jpeg, .png"/>  
-                            </div>
+                                <input type="file" id="model_image_author" name="model_image_author" accept=".jpg, .jpeg, .png"/> 
+                                <div class="model__remove_photo remove_photo">
+                                    <img src="static/images/bin.png" class="model__author_image">
+                                    <div class="remove_photo__text" onclick="RemovePicture()">Remove</div>  
+                                </div> 
+                            </div> 
                         </div>     
                         <div class="form__publish_date publish_date">
                             <div class="form_text">Publish Date</div>

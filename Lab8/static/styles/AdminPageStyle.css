@@ -577,3 +577,22 @@ a{
     height: 144px;  
     border: 1px solid rgba(234, 234, 234, 1)
 }   
+
+.remove_photo__text{
+    color:  rgba(232, 105, 97, 1);
+    padding-left: 16px;
+    font-family: Oxygen;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+}
+
+.model__remove_photo{
+    display: flex;
+    align-items: center;
+}
+
+.remove_photo__text-hidden{
+    display: none;
+}
