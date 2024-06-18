@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/styles/AdminPageStyle.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter&family=Poppins:ital@1&family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300&display=swap');
+    </style>
+    <title>Admin</title>
+    <script src="static/scripts/script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header class="container__top_bar">
+            <div class="top_bar__top_bar_content">
+                <span class="top_bar_content__title">Escape.author</span>
+                <div class="top_bar_content__photos photos">
+                    <img src="static/images/avatar.png" class="photos_property-avatar">
+                    <img src="static/images/log-out.png" class="photos_property-icon">
+                </div>
+            </div>
+        </header>
+        <main class="container__main main" >
+            <div class="main__new_post new_post">
+                <div class="new_post__info info">
+                    <p class="info_title">New Post</p>
+                    <p class="info_description">Fill out the form bellow and publish your article</p>
+                </div>
+                <button class="info_button">Publish</button>
+            </div>
+            <div class="main__create create">
+                <div class="create__main_information">Main Information</div> 
+                <div class="create__model model">
+                    <div class="model__form form">
+                        <div class="form_title title">
+                            <div class="form_text">Title</div>
+                            <input type="text" class="form_input" placeholder="New Post" id="post_form"  
+                                onchange="DisplayTextFromInput('post_form', 'post_title', 1)">
+                        </div>   
+                        <div class="form__description description">
+                            <div class="form_text">Short description</div>
+                            <input class="form_input" placeholder="Please, enter any description" id="description_form" 
+                                onchange="DisplayTextFromInput('description_form', 'description_info', 2)">
+                        </div>   
+                        <div class="form__author author">
+                            <div class="form_text">Author name</div>
+                            <input type="text" class="author__input" id="author_inp" onchange="DisplayTextFromInput('author_inp', 'author_out', 3)">
+                        </div>  
+                        <div class="form__author_photo author_photo">
+                            <div class="form_text">Author Photo</div>
+                            <div class="author_photo__model">
+                                <div class="model__circle_image"><img src="static/images/icon_camera.png" class="model__author_image"></div>
+                                <label for="model_image_author" class="model__author_img">Upload</label>  
+                                <input type="file" id="model_image_author" name="model_image_author" accept=".jpg, .jpeg, .png"/>  
+                            </div>
+                        </div>     
+                        <div class="form__publish_date publish_date">
+                            <div class="form_text">Publish Date</div>
+                            <input type="date" class="form_input" id="dateField" onchange="DisplayTextFromInput('dateField', 'date_out', 4)">
+                        </div>  
+                        <div class="form__post_img post_img">
+                            <div class="form_text">Post Image</div>
+                            <div class="post_img__upload post_img-big">
+                                <div class="upload__download_post download_post" id="upload__download_post">
+                                    <img src="static/images/icon_camera.png" class="download_post_icon">
+                                    <label for="download_post_img" class="download_post_label">Upload</label>  
+                                    <input type="file" id="download_post_img" accept=".jpg, .jpeg, .png" onchange="previewBigImage()"/>  
+                                </div>
+                            </div>
+                            <div class="form__post_img_sizes">Size up to 10mb. Format: png, jpeg, gif.</div>
+                        </div>
+                        <div class="form__post_img post_img">
+                            <div class="form_text">Post Image</div>
+                            <div class="post_img__upload post_img-smaller">
+                                <div class="download_post download_post-small">
+                                    <img src="static/images/icon_camera.png" class="download_post_icon">
+                                    <label for="download_post-small_img" class="download_post_label">Upload</label>  
+                                    <input type="file" id="download_post-small_img" accept=".jpg, .jpeg, .png"  onchange="previewSmallImage()"/>
+                                </div>
+                            </div>
+                            <div class="form__post_img_sizes">Size up to 5mb. Format: png, jpeg, gif.</div>
+                        </div>
+                    </div>
+                    <div class="model__template template">
+                        <div class="template__article_prewiew_text">Article preview</div>
+                        <div class="template__prewiew">
+                            <div class="prewiew__border border">
+                                <div class="border__top_menu top_menu">
+                                    <div class="border__nav nav">
+                                        <div class="nav__item"></div>
+                                        <div class="nav__item"></div>
+                                        <div class="nav__item"></div>
+                                    </div>
+                                </div>
+                                <div class="border__main_prewiew main_prewiew">
+                                    <div class="main_prewiew__info info">
+                                        <div class="info__title post_title">New Post</div>
+                                        <div class="info__description description_info">Please, enter any description</div>
+                                    </div>
+                                    <img src="" class="info__post_img" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="template__card_preview card_prewiew">
+                            <div class="card_preview_text">Post card preview</div>
+                            <div class="card_preview__border">
+                                <div class="border__post_mini_prewiew post_mini_prewiew">
+                                    <img src="" class="post_mini_prewiew__image" alt="">
+                                    <div class="post_mini_prewiew__post_info post_info">
+                                        <div class="post_info__title post_title">New Post</div>
+                                        <div class="post_info__description description_info">Please, enter any description</div>
+                                    </div>
+                                    <div class="post_mini_prewiew__prewiew_author prewiew_author">
+                                        <div class="prewiew_author__about_author about_author">
+                                            <div class="about_author__img"></div>
+                                            <div class="about_author__name author_out">Enter author name</div>
+                                        </div>
+                                        <div class="prewiew_author__date date_out" id="date_out">4/19/2023</div>
+                                    </div>
+                                </div>    
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </main>
+        <div class="container__content content">
+            <div class="content__title">Content</div>
+            <div class="content__form_content form_content">
+                <div class="form_content__description">Post content (plain text)</div>
+                <textarea class="form_content__input" placeholder="Type anything you want ..."></textarea>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

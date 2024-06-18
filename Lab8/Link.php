@@ -1,0 +1,1 @@
+<a href='<?= $link?>' class="list__link"><?=$link?></a>
